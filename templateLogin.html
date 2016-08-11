@@ -1,0 +1,24 @@
+		<div class="CajaInicio animated pulse">
+			<form  enctype="multipart/form-data">
+
+				
+					<!-- <label class="control-label col-sm-2">Usuario</label> -->
+					<!-- <div class="form-group col-sm-10"> -->
+						<input type="text" name="nombre" value="admin" ng-model="nombre" required autofocus="autofocus" placeholder="Usuario">
+					<!-- </div> -->
+
+
+					<!-- <label class="control-label col-sm-2">Contraseña</label> -->
+					<!-- <div class="form-group col-sm-10"> -->
+						<input type="password" name="pass" value="123"  ng-model="pass" required placeholder="Contraseña"></input>
+					<!-- </div> -->
+
+
+					<div style="padding-left: 20%;padding-top: 1%;" class="col-md-6 col-xs-6 col-sm-3">
+						<button type="submit" class="btn btn-success btn-lg" name="enviar" value="enviar" ng-click="logear()">Ingresar</button>
+						<button class="btn btn-info btn-lg" ng-click="llenarAdmin()">Llenar ADMIN</button>
+               			<button class="btn btn-danger btn-lg" ng-click="llenarVendedor()">Llenar VENDEDOR</button>
+												
+					</div>
+			</form>
+		</div>

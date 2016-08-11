@@ -1,0 +1,67 @@
+<div class="container">		   
+	        				
+	<h1 id="titulomenu">Listado de productos</h1>	
+							<!-- id="listaPersonas" -->		
+							
+								<a class="btn btn-info " name="imprimir" onclick="window.print();"><span class="glyphicon glyphicon-print">&nbsp;</span>Imprimir</a>
+								<form method="post" action="pdf.php">
+									<input type="submit" name="pdf" value="Informe PDF" class="btn btn-danger">
+								</form>								
+								<table class='table table-hover table-responsive' id="listaUsuarios">
+									<thead>
+										<tr>												
+											<th>  Fecha     </th>
+											<th>  Id Vendedor   </th>											
+											<th>  IdBomba     </th>
+											<th>  Direccion  </th>
+											<th>  Estado  </th>											
+											<th>  CAMBIAR ESTADO  </th>											
+											<th>  MAPA  </th>	
+										</tr> 
+									</thead>
+									<tr ng-repeat="pedido in ListadoPedidos">
+										
+
+										<td>{{pedido.fecha}}</td>
+										<td>{{pedido.legajovendedor}}</td>																		
+										<td>{{pedido.idbomba}}</td>
+										<td>{{pedido.direccion}}</td>
+										<td>{{pedido.estado}}</td>																
+
+										<td>
+											<form>
+											
+												<select name="estado2" ng-model="estado2">
+													<option value="generado">generado</option>
+													<option value="pagado">pagado</option>
+													<option value="enviado">enviado</option>
+													<option value="con reclamo">con reclamo</option>
+												</select>
+											
+												<a class="btn btn-info " name="guardar" ng-click="GuardarEstado(pedido,estado2)" ><span class="glyphicon glyphicon-save">&nbsp;</span>CAMBIAR</a>
+											
+											</form>
+										</td>
+
+										<td>
+											<td><button class='btn btn-warning' name='Mapa' ui-sref="mapa({id:pedido.id,direccion:pedido.direccion})"><span class='glyphicon glyphicon-map-marker'>&nbsp;</span>Mapa</button></td>
+										</td>
+															
+									</tr>
+
+
+									<tr ng-if="resultado.length == 0">
+
+										<td></td>							
+										<td>No existen pedidos con eso datos..</td>
+										<td></td>
+										<td></td>
+										<td></td>										
+										<td></td>
+															
+									</tr>
+
+
+
+								</table>						
+</div>

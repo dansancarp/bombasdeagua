@@ -1,0 +1,58 @@
+<div class="container">		   
+	        				
+	<h1 id="titulomenu">Listado de productos</h1>	
+							<!-- id="listaPersonas" -->								
+								<table class='table table-hover table-responsive' id="listaUsuarios">
+									<thead>
+										<tr>	
+											<th>  Id  </th>											
+											<th>  Modelo     </th>
+											<th>  Potencia   </th>											
+											<th>  Tension     </th>
+											<th>  Succion  </th>
+											<th>  Elevacion  </th>
+											<th>  Caudal  </th>
+											<th>  Precio  </th>
+											<th>  Stock  </th>
+											<th>  VENDER  </th>
+											<th>  BORRAR  </th>											
+											<th>  EDITAR  </th>
+										</tr> 
+									</thead>
+									<tr ng-repeat="producto in ListadoProductos">
+										
+									<td>{{producto.id}}</td>
+										<td>{{producto.modelo}}</td>
+										<td>{{producto.potencia}}</td>																		
+										<td>{{producto.tension}}</td>
+										<td>{{producto.succion}}</td>
+										<td>{{producto.elevacion}}</td>
+										<td>{{producto.caudal}}</td>
+										<td>{{producto.precio}}</td>
+										<td>{{producto.stock}}</td>
+									
+
+										<td><button class='btn btn-info' name='Vender' ui-sref="pedido({id:producto.id,modelo:producto.modelo,potencia:producto.potencia,tension:producto.tension,succion:producto.succion,elevacion:producto.elevacion,caudal:producto.caudal,precio:producto.precio,stock:producto.stock})"><span class='glyphicon glyphicon-shopping-cart'>&nbsp;</span>Vender</button></td>
+
+										<td><button class='btn btn-danger' name='Borrar' ng-click="BorrarProducto(producto)"><span class='glyphicon glyphicon-remove-circle'>&nbsp;</span>Borrar</button></td>							
+										
+										<td><button class='btn btn-warning' name='Modificar' ui-sref="modificarProducto({id:producto.id,modelo:producto.modelo,potencia:producto.potencia,tension:producto.tension,succion:producto.succion,elevacion:producto.elevacion,caudal:producto.caudal,precio:producto.precio,stock:producto.stock})"><span class='glyphicon glyphicon-edit'>&nbsp;</span>Modificar</button></td>
+															
+									</tr>
+
+
+									<tr ng-if="resultado.length == 0">
+
+										<td></td>							
+										<td>No existen productos con eso datos..</td>
+										<td></td>
+										<td></td>
+										<td></td>										
+										<td></td>
+															
+									</tr>
+
+
+
+								</table>						
+</div>

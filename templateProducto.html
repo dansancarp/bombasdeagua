@@ -1,0 +1,42 @@
+<div class="container">		    
+	<h1 id="titulomenu">Alta Bomba</h1>
+	<form class="form" role="form" >
+			<div class="form-group">
+				<label>Modelo</label>
+				<input type="text" name="modelo" ng-model="producto.modelo" placeholder="ingrese modelo" class="form-control"/>
+			</div>
+			<div class="form-group">
+				<label>Potencia</label>
+				<input type="text" name="potencia" ng-model="producto.potencia" placeholder="ingrese potencia" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>Tension</label>
+				<label class="radio-inline"><input type="radio" ng-model="producto.tension" value="220 V - 50Hz">220 V - 50Hz</label>
+				<label class="radio-inline"><input type="radio" ng-model="producto.tension" value="110 V - 50Hz">110 V - 50Hz</label>
+			</div>     		
+			<div class="form-group">
+				<label>Succion (metros)</label>
+				<input type="text" min="0" name="succion" ng-model="producto.succion" placeholder="ingrese succion" class="form-control"/>
+			</div>
+			<div class="form-group">
+				<label>Elevacion (metros)</label>
+				<input type="text" min="0" name="elevacion" ng-model="producto.elevacion" placeholder="ingrese elevacion" class="form-control"/>
+			</div>
+			<div class="form-group">
+				<label>Caudal (L/minuto)</label>
+				<input type="text" name="caudal" ng-model="producto.caudal" placeholder="ingrese caudal" class="form-control"/>
+			</div>
+			<div class="form-group">
+				<label>Precio (Pesos argentinos)</label>
+				<input type="text" name="precio" ng-model="producto.precio" placeholder="ingrese precio" class="form-control"/>
+			</div>
+			<div class="form-group">
+				<label>Stock</label>
+				<input type="text" min="0" name="stock" ng-model="producto.stock" placeholder="ingrese stock" class="form-control"/>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-info" name="guardar" ng-click="GuardarProducto()" >Guardar</button>
+			</div>		
+	</form>	
+</div>

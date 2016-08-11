@@ -1,0 +1,21 @@
+<div class="container">		    
+	<h1 id="titulomenu">Venta Bomba</h1>
+	<form class="form" role="form" >
+			<div class="form-group">
+				<label>Id Vendedor</label>
+				<input type="text" name="legajovendedor" ng-model="pedido.legajovendedor" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label>IdBomba</label>
+				<input type="text" name="idbomba" ng-model="pedido.idbomba" class="form-control" />
+			</div>     		
+			<div class="form-group">
+				<label>Direccion</label>
+				<input type="text" name="direccion" ng-model="pedido.direccion" placeholder="ingrese direccion" class="form-control"/>
+			</div>
+
+			<div class="form-group">
+				<button class="btn btn-info" name="Vender" ng-click="VenderProducto(pedido)" >Vender</button>
+			</div>		
+	</form>	
+</div>
